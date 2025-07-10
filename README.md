@@ -1,30 +1,39 @@
 # 📈 Smart Market Advisor
 
-An AI-powered stock market assistant that fetches real-time stock data, analyzes trends, checks news sentiment, and recommends **Buy / Hold / Sell** actions with suggested duration.
+**Smart Market Advisor** is an AI-powered stock suggestion and news analysis tool that provides actionable insights like **Buy/Hold/Sell** recommendations based on:
+- Recent stock trends
+- Company-specific news
+- Global economic indicators
 
-## 🚀 Features
+🎯 Built as part of the PromptForge Hackathon  
+🚀 Tech Stack: Python, Streamlit, yFinance, Web Scraping (news), Pandas
 
-- 📊 30-day stock trend visualization
-- 📰 Company and global news analysis
-- 🧠 AI-driven investment suggestions (with duration)
-- 💡 Streamlit-based interactive UI
-- 📝 Advice logging to CSV file
+---
 
-## 🛠️ Tech Stack
+## 🔍 Features
 
-- Python
-- yFinance
-- BeautifulSoup
-- Streamlit
-- Pandas
-- CSV Logger
+- 📊 Fetch 30-day price trends of any NSE stock (e.g., `TCS.NS`, `HDFCBANK.NS`)
+- 📰 Analyze company news and global conditions (no paid APIs used)
+- 💡 Suggest Buy / Hold / Sell with duration (e.g., Hold for 3–5 days)
+- ✅ Visual trend charts
+- 💹 Show top 3 other performing stocks (last 7 days)
+- 🕒 Displays Indian Stock Market live status (Open/Closed)
 
-## 📦 Setup Instructions
+---
+
+## 📦 How to Run Locally
 
 ```bash
+# Step 1: Clone the repo
 git clone https://github.com/makala9756/smart-market-advisor.git
 cd smart-market-advisor
+
+# Step 2: Create and activate virtual environment
 python -m venv venv
-venv\Scripts\activate
+venv\Scripts\activate  # for Windows
+
+# Step 3: Install dependencies
 pip install -r requirements.txt
+
+# Step 4: Run the Streamlit app
 streamlit run app.py

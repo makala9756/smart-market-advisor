@@ -1,5 +1,6 @@
 # main.py
 
+from recommender import suggest_alternative_stocks
 from visualizer import plot_stock_trend
 from advisor import get_stock_advice
 from global_conditions import fetch_global_conditions
@@ -50,7 +51,15 @@ def main():
             global_news  = global_news
         )
 
-
+  
+     # Suggest other good performers
+    suggestions = suggest_alternative_stocks(stock_symbol)
+    if suggestions:
+       print("\n📢 Top Gaining Stocks in Last 7 Days:")
+       for sym, change in suggestions:
+          print(f"   {sym}: 📈 +{change}%")
+    else:
+         print("\n📢 No significantly better-performing stocks found.")
 
 
 
